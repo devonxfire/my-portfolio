@@ -118,6 +118,53 @@ main {
     background-color: $secondary-color;
 }
 
+// Work/Projects
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+
+    img {
+        width: 100%;
+        border: #fff solid 2px;
+
+        &:hover {
+            opacity: 0.5;
+        border-bottom: 5px $secondary-color solid;
+            @include easeOut;
+        }
+    }
+}
+
+// Button styles
+
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+@extend .btn;
+background: darken($primary-color, 50);
+color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    @extend .btn;
+        background: lighten($primary-color, 50);
+        color: #333;
+
+}
+
 #main-footer {
     text-align: center;
     padding: 1rem;
